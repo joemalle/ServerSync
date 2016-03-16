@@ -34,6 +34,7 @@
 
   NSTask *task = [[NSTask alloc] init];
   task.launchPath = @"/usr/bin/rsync";
+  // these would change...
   task.arguments = @[@"-avzp", @"/Users/malle/Desktop/site", @"root@hashtagmap.website:/var/www/html2"];
   task.standardOutput = pipe;
   [task launch];
